@@ -18,7 +18,7 @@
     <groupId>com.adobe.aem.guides</groupId>
     <artifactId>aem-guides-wknd</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3</version>
     <description>WKND Sites Project</description>
 
     <modules>
@@ -102,6 +102,24 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+			<plugin>
+			<groupId>external.atlassian.jgitflow</groupId>
+			<artifactId>jgitflow-maven-plugin</artifactId>
+			<version>1.0-m5.1</version>
+			<configuration>
+				<flowInitContext>
+					<masterBranchName>master</masterBranchName>
+					<developBranchName>development</developBranchName>
+					<featureBranchPrefix>feature-</featureBranchPrefix>
+					<releaseBranchPrefix>release-</releaseBranchPrefix>
+					<hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+					<versionTagPrefix>version-</versionTagPrefix>
+				</flowInitContext>
+				<noDeploy>true</noDeploy>
+				<scmCommentPrefix>[RELEASE] </scmCommentPrefix>
+				<squash>false</squash>
+			</configuration>
+		</plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -274,7 +292,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore/>
+                                        <ignore />
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -294,7 +312,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore/>
+                                        <ignore />
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -315,7 +333,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore/>
+                                        <ignore />
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
