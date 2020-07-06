@@ -18,7 +18,7 @@
     <groupId>com.adobe.aem.guides</groupId>
     <artifactId>aem-guides-wknd</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <description>WKND Sites Project</description>
 
     <modules>
@@ -117,6 +117,7 @@
 				</flowInitContext>
 				<noDeploy>true</noDeploy>
 				<scmCommentPrefix>[RELEASE] </scmCommentPrefix>
+				<releaseSnapshots>false</releaseSnapshots>
 				<squash>false</squash>
 			</configuration>
 		</plugin>
